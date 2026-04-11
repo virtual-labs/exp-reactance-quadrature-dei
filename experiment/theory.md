@@ -1,6 +1,3 @@
-# Theory and Procedure of the Experiment - 2
-
----
 
 ## (a) Slip Test
 
