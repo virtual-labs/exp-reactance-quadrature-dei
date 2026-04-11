@@ -81,4 +81,8 @@
 
 **To determine the direct axis reactance (Xd) and quadrature axis reactance (Xq) of synchronous machine.**
 
-[▶ Watch Video](../Dreamweaver/videos/video2.mp4)
+<br>
+
+<video width="480" height="360" autoplay loop controls>
+  <source src="../Dreamweaver/videos/video2.mp4" type="video/mp4">
+</video>
