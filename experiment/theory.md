@@ -74,7 +74,7 @@
 
 <br>
 
-# Experiment 2
+## Video for experiment:
 
 **To determine the direct axis reactance (Xd) and quadrature axis reactance (Xq) of synchronous machine.**
 
