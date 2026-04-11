@@ -1,4 +1,4 @@
-# Equipments Required in Experiment - 2
+## Equipments Required in Experiment - 2
 
 <BR>
 
@@ -12,7 +12,7 @@
 
 <br>
 
-# Connection Diagrams of Experiment - 2
+## Connection Diagrams of Experiment - 2
 
 <br><br>
 
@@ -35,7 +35,6 @@
 </p>
 
 <br>
-# Observations of Experiment - 2
 
 ---
 
