@@ -33,3 +33,25 @@
 <p align="center">
   <b>Fig 2.2 Connection Diagram for Static Test</b>
 </p>
+
+<br>
+# Observations of Experiment - 2
+
+---
+
+## Observation Table
+
+| S.No. | Voltage (Max–Min) | Current (Max–Min) | Xd | Xq | Speed |
+|------|-------------------|-------------------|----|----|--------|
+| 1    | .                 | .                 | .  | .  | .      |
+| 2    | .                 | .                 | .  | .  | .      |
+| 3    | .                 | .                 | .  | .  | .      |
+| ...  | .                 | .                 | .  | .  | .      |
+| n    | .                 | .                 | .  | .  | .      |
+
+---
+
+### Average Values
+
+**Average value of Xd = ________**  
+**Average value of Xq = ________**
