@@ -72,4 +72,13 @@
 4. Fine-tune motor speed to get maximum swings in meters.  
 5. Note maximum and minimum voltage/current readings.  
 6. Take multiple readings at different variac settings.  
-7. Increase speed slightly above synchronous speed and repeat readings.  
+7. Increase speed slightly above synchronous speed and repeat readings.
+
+
+<br>
+
+# Experiment 2
+
+**To determine the direct axis reactance (Xd) and quadrature axis reactance (Xq) of synchronous machine.**
+
+[▶ Watch Video](../Dreamweaver/videos/video2.mp4)
