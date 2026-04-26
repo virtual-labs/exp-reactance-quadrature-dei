@@ -1,39 +1,183 @@
-<!-- Replace ONLY the inner content part (post-bgbtm section) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulation of Experiment 2</title>
 
-<h2 class="title">⚡ Simulation of Experiment - 2</h2>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<div class="lead-text">
-    🔬 Interactive simulations for synchronous machines — click a module to launch
-</div>
+body {
+    background: #eef2f7;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem 1rem;
+}
 
-<div class="nob">
-    <div class="sim-grid">
+#page {
+    max-width: 1200px;
+    margin: auto;
+}
 
-        <!-- Simulation 1: Phase Sequence -->
-        <div class="sim-btn-card">
-            <a href="exp1.html" class="sim-button" target="_blank">
-                <div class="sim-icon">🔌</div>
-                <div class="sim-title">Phase Sequence</div>
-                <div class="sim-desc">Check phase order of a synchronous machine</div>
-                <span class="sim-badge">▶ SIMULATE</span>
-            </a>
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    width: 100%;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.post-bgbtm {
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    border-left: 6px solid #2c7da0;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lead-text {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    border-left: 3px solid #ccc;
+    padding-left: 1rem;
+}
+
+.sim-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.sim-btn-card {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.sim-btn-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.sim-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 1.5rem;
+    color: inherit;
+}
+
+.sim-icon {
+    font-size: 2.5rem;
+    background: #ecf3f9;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+}
+
+.sim-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1f3a5f;
+}
+
+.sim-desc {
+    font-size: 0.85rem;
+    color: #5b6e8c;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.sim-badge {
+    margin-top: 8px;
+    font-size: 0.7rem;
+    background: #eef2ff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #2c7da0;
+    font-weight: bold;
+}
+
+.info-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="page">
+    <div id="content">
+        <div class="post">
+            <div class="post-bgbtm">
+
+                <h2 class="title">⚡ Simulation of Experiment - 2</h2>
+
+                <div class="lead-text">
+                    🔬 Explore synchronous machine simulations — click to launch
+                </div>
+
+                <div class="sim-grid">
+
+                    <!-- Phase Sequence -->
+                    <div class="sim-btn-card">
+                        <a href="exp1.html" class="sim-button" target="_blank">
+                            <div class="sim-icon">🔌</div>
+                            <div class="sim-title">Phase Sequence</div>
+                            <div class="sim-desc">
+                                Checking phase sequence of synchronous machine
+                            </div>
+                            <div class="sim-badge">▶ SIMULATE</div>
+                        </a>
+                    </div>
+
+                    <!-- Slip Test -->
+                    <div class="sim-btn-card">
+                        <a href="exp2.html" class="sim-button" target="_blank">
+                            <div class="sim-icon">⚙️</div>
+                            <div class="sim-title">Slip Test</div>
+                            <div class="sim-desc">
+                                Simulation for Xd and Xq reactance
+                            </div>
+                            <div class="sim-badge">▶ SIMULATE</div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="info-note">
+                    🧪 Click any simulation to open interactive experiment
+                </div>
+
+            </div>
         </div>
-
-        <!-- Simulation 2: Slip Test -->
-        <div class="sim-btn-card">
-            <a href="exp2.html" class="sim-button" target="_blank">
-                <div class="sim-icon">⚙️</div>
-                <div class="sim-title">Slip Test</div>
-                <div class="sim-desc">Determine Xd and Xq reactances</div>
-                <span class="sim-badge">▶ SIMULATE</span>
-            </a>
-        </div>
-
     </div>
 </div>
 
-<hr />
-
-<div class="info-note">
-    🧪 Each simulation opens an interactive module for detailed analysis.
-</div>
+</body>
+</html>
