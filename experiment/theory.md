@@ -81,5 +81,5 @@
 <br>
 
 <video width="480" height="360" autoplay loop controls>
-  <source src="../Dreamweaver/videos/video2.mp4" type="video/mp4">
+  <source src="video/exp2.mp4" type="video/mp4">
 </video>
