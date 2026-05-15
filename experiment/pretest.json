@@ -1,39 +1,96 @@
 {
   "version": 2.0,
+ 
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+     
+      "question": "1. Ratio of X<sub>d</sub>/X<sub>q</sub> for cylindrical alternator is ------- X<sub>d</sub>/X<sub>q</sub> of salient pole machine",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "greater than",
+        "b": "less than",
+        "c": "Equal to",
+        "d": "None of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Cylindrical rotor has Xd ≈ Xq, so ratio is approximately 1.",
+        "b": "Correct. For cylindrical alternator Xd/Xq ≈ 1, while for salient pole Xd/Xq > 1 (typically 1.5 to 2.5). So cylindrical ratio is less than salient pole ratio.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+     
+      "question": "2. Steady state direct axis reactance is ---------- transient direct axis reactance",
+      "answers": {
+        "a": "greater than",
+        "b": "less than",
+        "c": "Equal to",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Correct. Steady state reactance Xd is greater than transient reactance Xd' because during transient, damper and field windings oppose flux changes.",
+        "b": "Incorrect.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      
+      "question": "3. In an hydro alternator, if X<sub>d</sub>=1.15 then the value of Xq will be approximately",
+      "answers": {
+        "a": "1.75",
+        "b": "15",
+        "c": "0.75",
+        "d": "0.075"
+      },
+      "explanations": {
+        "a": "Incorrect. That would make Xd/Xq < 1.",
+        "b": "Incorrect. Too high.",
+        "c": "Correct. For salient pole (hydro) alternators, Xq is typically 0.5 to 0.8 times Xd. So Xq ≈ 0.75 when Xd = 1.15.",
+        "d": "Incorrect. Too low."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+    
+      "question": "4.In Salient pole alternator the rotor diameter is -------- its length",
+      "answers": {
+        "a": "greater than",
+        "b": "lesser than",
+        "c": "Equal to",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Correct. Salient pole rotors have large diameter and short axial length (for low speed applications like hydro turbines).",
+        "b": "Incorrect. That describes cylindrical rotor.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+    
+      "question": "5. While conducting slip test, the synchronous machine runs at a slip 's' and stator supply frequency 'f', the frequency of voltage induced across open field terminals, envelope of the armature terminal voltage, envelope of the armature current, and armature current will be respectively",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "sf, sf, sf and f",
+        "b": "sf, f, sf and f",
+        "c": "f, sf, f and sf",
+        "d": "f, (1-s)f, (2-s)f and sf"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. Induced field voltage frequency = sf; Envelope of terminal voltage frequency = sf; Envelope of armature current frequency = sf; Armature current frequency = f.",
+        "b": "Incorrect.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }
