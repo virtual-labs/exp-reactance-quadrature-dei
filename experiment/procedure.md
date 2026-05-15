@@ -12,31 +12,17 @@
 
 <br>
 
-## Connection Diagrams of Experiment - 2
+# Connection Diagrams of Experiment - 2
 
-<br><br>
+![Fig 2.1 Connection Diagram for Slip Test](images/exp2/Fig.2.1.jpg)
 
-<p align="center">
-  <img src="../images/exp2/Fig.2.1.jpg">
-</p>
-
-<p align="center">
-  <b>Fig 2.1 Connection Diagram for Slip Test</b>
-</p>
-
-<br><br>
-
-<p align="center">
-  <img src="../images/exp2/Fig.2.2.jpg">
-</p>
-
-<p align="center">
-  <b>Fig 2.2 Connection Diagram for Static Test</b>
-</p>
-
-<br>
+**Fig 2.1 Connection Diagram for Slip Test**
 
 ---
+
+![Fig 2.2 Connection Diagram for Static Test](images/exp2/Fig.2.2.jpg)
+
+**Fig 2.2 Connection Diagram for Static Test**
 
 ## Observation Table
 
