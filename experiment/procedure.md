@@ -17,7 +17,7 @@
 <br><br>
 
 <p align="center">
-  <img src="../Dreamweaver/images/exp2/Fig.2.1.jpg">
+  <img src="../images/exp2/Fig.2.1.jpg">
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 <br><br>
 
 <p align="center">
-  <img src="../Dreamweaver/images/exp2/Fig.2.2.jpg">
+  <img src="../images/exp2/Fig.2.2.jpg">
 </p>
 
 <p align="center">
