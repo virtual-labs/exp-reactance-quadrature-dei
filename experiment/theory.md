@@ -80,6 +80,10 @@
 
 <br>
 
+<div align="center">
+   
 <video width="480" height="360" autoplay loop controls>
   <source src="video/exp2.mp4" type="video/mp4">
 </video>
+
+</div>
