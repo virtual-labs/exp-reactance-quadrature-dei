@@ -1,28 +1,34 @@
 ## Equipments Required in Experiment - 2
 
-<BR>
+<div align="center">
 
-| ![DC Motor - Synchronous Generator set](images/exp2/Eqp_mGset.jpg) | ![Ammeter](images/exp2/Eqp_AC&DCAmeter.jpg) |
-|-------------------------------------------------------------------|---------------------------------------------|
-| **Fig.1: DC Motor - Synchronous Generator set**                   | **Fig.2: Ammeter: 0 - 20A; 0 - 3 A**         |
+| Equipment | Image |
+|:---|:---:|
+| **Fig.1: DC Motor - Synchronous Generator set** | <img src="images/exp2/Eqp_mGset.jpg" width="200"> |
+| **Fig.2: Ammeter: 0 - 20A; 0 - 3 A** | <img src="images/exp2/Eqp_AC&DCAmeter.jpg" width="200"> |
+| **Fig.3: Voltmeter: 0 – 30V; 0 – 250V** | <img src="images/exp2/Eqp_AC&DCvoltmeter.jpg" width="200"> |
+| **Fig.4: Wattmeter: 0 - 1400 W** | <img src="images/exp2/Eqp_wattmeter.jpg" width="200"> |
 
-| ![Voltmeter](images/exp2/Eqp_AC&DCvoltmeter.jpg) | ![Wattmeter](images/exp2/Eqp_wattmeter.jpg) |
-|-------------------------------------------------|---------------------------------------------|
-| **Fig.3: Voltmeter: 0 – 30V; 0 – 250V**          | **Fig.4: Wattmeter: 0 - 1400 W**            |
-
-<br>
+</div>
 
 # Connection Diagrams of Experiment - 2
 
+
+<div align="center">
+  
 ![Fig 2.1 Connection Diagram for Slip Test](images/exp2/Fig.2.1.jpg)
 
 **Fig 2.1 Connection Diagram for Slip Test**
 
+</div>
 ---
-
+<div align="center">
+  
 ![Fig 2.2 Connection Diagram for Static Test](images/exp2/Fig.2.2.jpg)
 
 **Fig 2.2 Connection Diagram for Static Test**
+</div>
+
 
 ## Observation Table
 
