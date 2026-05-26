@@ -21,7 +21,7 @@
 **Fig 2.1 Connection Diagram for Slip Test**
 
 </div>
----
+
 <div align="center">
   
 ![Fig 2.2 Connection Diagram for Static Test](images/exp2/Fig.2.2.jpg)
