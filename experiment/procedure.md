@@ -1,6 +1,6 @@
-## Equipments Required in Experiment - 2
 
-## Procedural Steps
+
+## Procedure
 
 1. Connect circuit as shown in Fig. (connection diagram). Set output to zero.  
 2. Start DC motor and run slightly below synchronous speed.  
@@ -10,7 +10,7 @@
 6. Take multiple readings at different variac settings.  
 7. Increase speed slightly above synchronous speed and repeat readings.
 
-# Connection Diagrams of Experiment - 2
+##  Connection Diagrams 
 
 
 <div align="center">
