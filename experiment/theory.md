@@ -40,11 +40,10 @@
 - Z<sub>q</sub><sup>"</sup> = V<sub>q</sub> / (2I<sub>d</sub><sup>"</sup>)
 - X<sub>q</sub><sup>"</sup> = √(Z<sub>q</sub><sup>"2</sup> - R<sub>e</sub><sup>2</sup>)
 
+## Equipments Required
 
-## Equipments Required   
+<div style="display: flex; justify-content: center;">
 
-<div align="center">
-   
 | Equipment | Image |
 |:---|:---:|
 | **Fig.1: DC Motor - Synchronous Generator set** | <img src="images/exp2/Eqp_mGset.jpg" width="200"> |
@@ -53,7 +52,6 @@
 | **Fig.4: Wattmeter: 0 - 1400 W** | <img src="images/exp2/Eqp_wattmeter.jpg" width="200"> |
 
 </div>
-
 
 <br>
 
