@@ -1,15 +1,14 @@
 ## Equipments Required in Experiment - 2
 
-<div align="center">
+## Procedural Steps
 
-| Equipment | Image |
-|:---|:---:|
-| **Fig.1: DC Motor - Synchronous Generator set** | <img src="images/exp2/Eqp_mGset.jpg" width="200"> |
-| **Fig.2: Ammeter: 0 - 20A; 0 - 3 A** | <img src="images/exp2/Eqp_AC&DCAmeter.jpg" width="200"> |
-| **Fig.3: Voltmeter: 0 – 30V; 0 – 250V** | <img src="images/exp2/Eqp_AC&DCvoltmeter.jpg" width="200"> |
-| **Fig.4: Wattmeter: 0 - 1400 W** | <img src="images/exp2/Eqp_wattmeter.jpg" width="200"> |
-
-</div>
+1. Connect circuit as shown in Fig. (connection diagram). Set output to zero.  
+2. Start DC motor and run slightly below synchronous speed.  
+3. Switch on AC supply and increase variac output. Observe readings.  
+4. Fine-tune motor speed to get maximum swings in meters.  
+5. Note maximum and minimum voltage/current readings.  
+6. Take multiple readings at different variac settings.  
+7. Increase speed slightly above synchronous speed and repeat readings.
 
 # Connection Diagrams of Experiment - 2
 
