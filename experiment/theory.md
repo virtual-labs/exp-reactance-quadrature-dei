@@ -1,75 +1,58 @@
+## Theory 
 
-## (a) Slip Test
+### (a) Slip Test
 
-1. Check the phase sequence and voltage of the synchronous machine and the bus bar.  
-2. Remove the field excitation and connect RYB terminals of machine to RYB of bus bar through a three phase variac.  
-3. Start DC motor and adjust its speed near to synchronous speed. Switch on the AC supply and apply a small voltage.  
-   - The voltmeter across field winding should fluctuate within rated value.  
-   - Armature current should also fluctuate.  
-4. Increase AC voltage using variac until maximum current ≈ rated full load current.  
-5. Note maximum and minimum values of armature voltage and current.  
-6. Calculate phase voltage:  
-   Vp = Vl / √3  
-7. Record readings for different applied voltages.  
+1. Check the phase sequence and voltage of the synchronous machine and the bus bar.
+2. Remove the field excitation and connect RYB terminals of machine to RYB of bus bar through a three phase variac.
+3. Start DC motor and adjust its speed near to synchronous speed, switch on the AC supply and apply a small voltage. The voltmeter connected across field winding should fluctuate and remains within the rated value, if the slip is small and direction of rotation is correct. The armature current should also fluctuate.
+4. Increase the AC voltage applied to the armature from the variac, such that maximum current is nearly equal to the rated full load current of the armature.
+5. Note down the maximum and minimum value of armature applied voltage and current.
+6. Calculate the applied voltage per phase (V<sub>p</sub> = V<sub>l</sub> / √3).
+7. Record the readings for different applied voltage.
 
----
+### (b) Maximum lagging current test for determination of X<sub>q</sub>
 
-## (b) Maximum Lagging Current Test (for Xq)
+1. First run the synchronous machine as an alternator with the help of prime mover (dc machine) and synchronize it with bus bar.
+2. Switch off the DC supply to the motor so that the synchronous machine will run as a synchronous motor.
+3. Gradually reduce the excitation to zero.
+4. Reverse the field connection with the help of DPDT switch.
+5. Increase the excitation slowly in the negative direction till the machine shows sign of falling out of step. Note this field current, also note the line current.
 
-1. Run synchronous machine as alternator using DC motor and synchronize with bus bar.  
-2. Switch off DC supply so machine runs as synchronous motor.  
-3. Gradually reduce excitation to zero.  
-4. Reverse field connection using DPDT switch.  
-5. Increase excitation in negative direction until machine tends to fall out of step.  
-   - Note field current and line current.  
+### Static test for determination of Sub-transient reactance
 
----
+1. With the rotor of the synchronous machine standstill apply single phase voltage from a variac across two phase winding connected in series. The field is short circuited through an ammeter.
+2. Rotate the rotor manually such that two positions of flux linking are apparent from the induced field current.
+3. Let the armature voltage and current corresponding to the minimum induced field current be V<sub>q</sub> and I<sub>q</sub><sup>"</sup> and armature voltage and current corresponding to the maximum induced field current be V<sub>d</sub> and I<sub>d</sub><sup>"</sup>.
+4. Record the readings for different applied voltages.
 
-## Static Test (Sub-transient Reactance)
+### For Slip Test
 
-1. Keep rotor standstill and apply single-phase voltage via variac across two phase windings (in series).  
-   - Field is short-circuited through an ammeter.  
-2. Rotate rotor manually to observe flux positions.  
-3. Define:  
-   - Minimum field current → Vq, Iq″  
-   - Maximum field current → Vd, Id″  
-4. Record readings for different voltages.  
+- Z<sub>d</sub> = maximum phase voltage / minimum phase current
+- X<sub>d</sub> = √(Z<sub>d</sub><sup>2</sup> - R<sub>e</sub><sup>2</sup>)
+- Z<sub>q</sub> = minimum phase voltage / maximum phase current
+- X<sub>q</sub> = √(Z<sub>q</sub><sup>2</sup> - R<sub>e</sub><sup>2</sup>)
+- R<sub>e</sub> = Equivalent resistance / Phase of the alternator
 
----
+### Static Test for X<sub>d</sub><sup>"</sup> and X<sub>q</sub><sup>"</sup>
 
-## Formulas
+- Z<sub>d</sub><sup>"</sup> = V<sub>d</sub> / (2I<sub>d</sub><sup>"</sup>)
+- X<sub>d</sub><sup>"</sup> = √(Z<sub>d</sub><sup>"2</sup> - R<sub>e</sub><sup>2</sup>)
+- Z<sub>q</sub><sup>"</sup> = V<sub>q</sub> / (2I<sub>d</sub><sup>"</sup>)
+- X<sub>q</sub><sup>"</sup> = √(Z<sub>q</sub><sup>"2</sup> - R<sub>e</sub><sup>2</sup>)
 
-### Slip Test
 
-- Zd = (Maximum phase voltage) / (Minimum phase current)  
-- Xd = √(Zd² − Re²)  
+## Equipments Required   
 
-- Zq = (Minimum phase voltage) / (Maximum phase current)  
-- Xq = √(Zq² − Re²)  
+<div align="center">
+   
+| Equipment | Image |
+|:---|:---:|
+| **Fig.1: DC Motor - Synchronous Generator set** | <img src="images/exp2/Eqp_mGset.jpg" width="200"> |
+| **Fig.2: Ammeter: 0 - 20A; 0 - 3 A** | <img src="images/exp2/Eqp_AC&amp;DCAmeter.jpg" width="200"> |
+| **Fig.3: Voltmeter: 0 – 30V; 0 – 250V** | <img src="images/exp2/Eqp_AC&amp;DCvoltmeter.jpg" width="200"> |
+| **Fig.4: Wattmeter: 0 - 1400 W** | <img src="images/exp2/Eqp_wattmeter.jpg" width="200"> |
 
-- Re = Equivalent resistance per phase  
-
----
-
-### Static Test
-
-- Zd″ = Vd / (2Id″)  
-- Xd″ = √(Zd″² − Re²)  
-
-- Zq″ = Vq / (2Iq″)  
-- Xq″ = √(Zq″² − Re²)  
-
----
-
-## Procedural Steps
-
-1. Connect circuit as shown in Fig. (connection diagram). Set output to zero.  
-2. Start DC motor and run slightly below synchronous speed.  
-3. Switch on AC supply and increase variac output. Observe readings.  
-4. Fine-tune motor speed to get maximum swings in meters.  
-5. Note maximum and minimum voltage/current readings.  
-6. Take multiple readings at different variac settings.  
-7. Increase speed slightly above synchronous speed and repeat readings.
+</div>
 
 
 <br>
@@ -82,8 +65,9 @@
 
 <div align="center">
    
-<video width="480" height="360" autoplay loop controls>
+<video width="480" height="360" controls>
   <source src="video/exp2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 
 </div>
