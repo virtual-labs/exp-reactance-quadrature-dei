@@ -40,16 +40,38 @@
 - Z<sub>q</sub><sup>"</sup> = V<sub>q</sub> / (2I<sub>d</sub><sup>"</sup>)
 - X<sub>q</sub><sup>"</sup> = √(Z<sub>q</sub><sup>"2</sup> - R<sub>e</sub><sup>2</sup>)
 
+
+
 ## Equipments Required
 
-<div style="display: flex; justify-content: center;">
+<div align="center">
 
-| Equipment | Image |
-|:---|:---:|
-| **Fig.1: DC Motor - Synchronous Generator set** | <img src="images/exp2/Eqp_mGset.jpg" width="200"> |
-| **Fig.2: Ammeter: 0 - 20A; 0 - 3 A** | <img src="images/exp2/Eqp_AC&amp;DCAmeter.jpg" width="200"> |
-| **Fig.3: Voltmeter: 0 – 30V; 0 – 250V** | <img src="images/exp2/Eqp_AC&amp;DCvoltmeter.jpg" width="200"> |
-| **Fig.4: Wattmeter: 0 - 1400 W** | <img src="images/exp2/Eqp_wattmeter.jpg" width="200"> |
+<table align="center">
+  <thead>
+    <tr>
+      <th>Equipment</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Fig.1: DC Motor - Synchronous Generator set</b></td>
+      <td><img src="images/exp2/Eqp_mGset.jpg" width="200"></td>
+    </tr>
+    <tr>
+      <td><b>Fig.2: Ammeter: 0 - 20A; 0 - 3 A</b></td>
+      <td><img src="images/exp2/Eqp_AC&amp;DCAmeter.jpg" width="200"></td>
+    </tr>
+    <tr>
+      <td><b>Fig.3: Voltmeter: 0 – 30V; 0 – 250V</b></td>
+      <td><img src="images/exp2/Eqp_AC&amp;DCvoltmeter.jpg" width="200"></td>
+    </tr>
+    <tr>
+      <td><b>Fig.4: Wattmeter: 0 - 1400 W</b></td>
+      <td><img src="images/exp2/Eqp_wattmeter.jpg" width="200"></td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
