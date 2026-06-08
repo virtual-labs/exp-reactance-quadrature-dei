@@ -2,38 +2,84 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. When a synchronous motor is running at synchronous speed, the damper winding produces",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Damping torque",
+        "b": "Eddy current torque",
+        "c": "Driving torque",
+        "d": "No torque"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. Damper winding produces damping torque during oscillations to reduce hunting.",
+        "b": "Incorrect. Eddy currents are part of damping but not the primary torque.",
+        "c": "Incorrect. Damper winding does not produce driving torque at synchronous speed.",
+        "d": "Incorrect. It produces damping torque."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "a"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. The reactance of any machine is ------------- proportional to reluctance of flux path and ---------- proportional to square of number of turns",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "inversely, directly",
+        "b": "directly, inversely",
+        "c": "directly, directly",
+        "d": "inversely, inversely"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. Reactance X = 2πfL, and L ∝ N²/Reluctance, so X ∝ N² and X ∝ 1/Reluctance.",
+        "b": "Incorrect.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "a"
+    },
+    {
+      "question": "3. The armature reactance of salient pole synchronous machine",
+      "answers": {
+        "a": "is equal to X<sub>d</sub>",
+        "b": "is equal to X<sub>q</sub>",
+        "c": "varies between X<sub>d</sub> and X<sub>q</sub>",
+        "d": "none of the above"
+      },
+      "explanations": {
+        "a": "Incorrect. Armature reactance depends on rotor position.",
+        "b": "Incorrect.",
+        "c": "Correct. Due to saliency, armature reactance varies between Xd and Xq depending on rotor position relative to MMF axis.",
+        "d": "Incorrect."
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "4. The ratio of X<sub>d</sub> to X<sub>q</sub> in salient pole machine varies in the range",
+      "answers": {
+        "a": "0.66 to 0.7",
+        "b": "0.3 to 0.5",
+        "c": "0.9 to 1.0",
+        "d": "1.0 to 1.5"
+      },
+      "explanations": {
+        "a": "Incorrect. That is for Xq/Xd, not Xd/Xq.",
+        "b": "Incorrect.",
+        "c": "Incorrect. That is for cylindrical machines.",
+        "d": "Correct. For salient pole machines, Xd/Xq typically ranges from 1.0 to 1.5 (or higher up to 2.5 in some cases)."
+      },
+      "correctAnswer": "d"
+    },
+    {
+      "question": "5. By which test synchronous machine can be recognised as cylindrical or salient pole type?",
+      "answers": {
+        "a": "Slip Test",
+        "b": "Static Test",
+        "c": "Open circuit Test",
+        "d": "Short circuit Test"
+      },
+      "explanations": {
+        "a": "Correct. Slip test reveals whether Xd = Xq (cylindrical) or Xd ≠ Xq (salient pole) by observing armature current and voltage variations.",
+        "b": "Incorrect.",
+        "c": "Incorrect. OC test gives magnetization curve, not reactance ratio.",
+        "d": "Incorrect. SC test gives synchronous reactance but not Xd/Xq separately."
+      },
+      "correctAnswer": "a"
     }
   ]
 }
