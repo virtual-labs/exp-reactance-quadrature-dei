@@ -1,10 +1,8 @@
 {
   "version": 2.0,
- 
   "questions": [
     {
-      
-      "question": "6. When a synchronous motor is running at synchronous speed, the damper winding produces",
+      "question": "1. When a synchronous motor is running at synchronous speed, the damper winding produces",
       "answers": {
         "a": "Damping torque",
         "b": "Eddy current torque",
@@ -17,11 +15,10 @@
         "c": "Incorrect. Damper winding does not produce driving torque at synchronous speed.",
         "d": "Incorrect. It produces damping torque."
       },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
+      "correctAnswer": "a"
     },
     {
-      "question": "7. The reactance of any machine is ------------- proportional to reluctance of flux path and ---------- proportional to square of number of turns",
+      "question": "2. The reactance of any machine is ------------- proportional to reluctance of flux path and ---------- proportional to square of number of turns",
       "answers": {
         "a": "inversely, directly",
         "b": "directly, inversely",
@@ -34,12 +31,10 @@
         "c": "Incorrect.",
         "d": "Incorrect."
       },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
+      "correctAnswer": "a"
     },
     {
-      
-      "question": "8. The armature reactance of salient pole synchronous machine",
+      "question": "3. The armature reactance of salient pole synchronous machine",
       "answers": {
         "a": "is equal to X<sub>d</sub>",
         "b": "is equal to X<sub>q</sub>",
@@ -52,12 +47,10 @@
         "c": "Correct. Due to saliency, armature reactance varies between Xd and Xq depending on rotor position relative to MMF axis.",
         "d": "Incorrect."
       },
-      "correctAnswer": "c",
-      "difficulty": "advanced"
+      "correctAnswer": "c"
     },
     {
-     
-      "question": "9. The ratio of X<sub>d</sub> to X<sub>q</sub> in salient pole machine varies in the range",
+      "question": "4. The ratio of X<sub>d</sub> to X<sub>q</sub> in salient pole machine varies in the range",
       "answers": {
         "a": "0.66 to 0.7",
         "b": "0.3 to 0.5",
@@ -70,12 +63,10 @@
         "c": "Incorrect. That is for cylindrical machines.",
         "d": "Correct. For salient pole machines, Xd/Xq typically ranges from 1.0 to 1.5 (or higher up to 2.5 in some cases)."
       },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
+      "correctAnswer": "d"
     },
     {
-      
-      "question": "10. By which test synchronous machine can be recognised as cylindrical or salient pole type?",
+      "question": "5. By which test synchronous machine can be recognised as cylindrical or salient pole type?",
       "answers": {
         "a": "Slip Test",
         "b": "Static Test",
@@ -88,8 +79,7 @@
         "c": "Incorrect. OC test gives magnetization curve, not reactance ratio.",
         "d": "Incorrect. SC test gives synchronous reactance but not Xd/Xq separately."
       },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
+      "correctAnswer": "a"
     }
   ]
 }
