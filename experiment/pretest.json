@@ -1,9 +1,7 @@
 {
   "version": 2.0,
- 
   "questions": [
     {
-     
       "question": "1. Ratio of X<sub>d</sub>/X<sub>q</sub> for cylindrical alternator is ------- X<sub>d</sub>/X<sub>q</sub> of salient pole machine",
       "answers": {
         "a": "greater than",
@@ -17,11 +15,9 @@
         "c": "Incorrect.",
         "d": "Incorrect."
       },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
+      "correctAnswer": "b"
     },
     {
-     
       "question": "2. Steady state direct axis reactance is ---------- transient direct axis reactance",
       "answers": {
         "a": "greater than",
@@ -35,11 +31,9 @@
         "c": "Incorrect.",
         "d": "Incorrect."
       },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
+      "correctAnswer": "a"
     },
     {
-      
       "question": "3. In an hydro alternator, if X<sub>d</sub>=1.15 then the value of Xq will be approximately",
       "answers": {
         "a": "1.75",
@@ -53,11 +47,9 @@
         "c": "Correct. For salient pole (hydro) alternators, Xq is typically 0.5 to 0.8 times Xd. So Xq ≈ 0.75 when Xd = 1.15.",
         "d": "Incorrect. Too low."
       },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
+      "correctAnswer": "c"
     },
     {
-    
       "question": "4.In Salient pole alternator the rotor diameter is -------- its length",
       "answers": {
         "a": "greater than",
@@ -71,11 +63,9 @@
         "c": "Incorrect.",
         "d": "Incorrect."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "a"
     },
     {
-    
       "question": "5. While conducting slip test, the synchronous machine runs at a slip 's' and stator supply frequency 'f', the frequency of voltage induced across open field terminals, envelope of the armature terminal voltage, envelope of the armature current, and armature current will be respectively",
       "answers": {
         "a": "sf, sf, sf and f",
@@ -89,8 +79,7 @@
         "c": "Incorrect.",
         "d": "Incorrect."
       },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
+      "correctAnswer": "a"
     }
   ]
 }
