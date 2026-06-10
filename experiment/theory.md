@@ -27,26 +27,18 @@
 
 ### For Slip Test
 
-$$Z_d = \frac{V_{\text{max}}}{I_{\text{min}}}$$
-
-$$X_d = \sqrt{Z_d^2 - R_e^2}$$
-
-$$Z_q = \frac{V_{\text{min}}}{I_{\text{max}}}$$
-
-$$X_q = \sqrt{Z_q^2 - R_e^2}$$
-
-$$R_e = \frac{R_{\text{eq}}}{N_{\text{ph}}}$$
+- Z<sub>d</sub> = maximum phase voltage / minimum phase current
+- X<sub>d</sub> = √(Z<sub>d</sub><sup>2</sup> - R<sub>e</sub><sup>2</sup>)
+- Z<sub>q</sub> = minimum phase voltage / maximum phase current
+- X<sub>q</sub> = √(Z<sub>q</sub><sup>2</sup> - R<sub>e</sub><sup>2</sup>)
+- R<sub>e</sub> = Equivalent resistance / Phase of the alternator
 
 ### Static Test for X<sub>d</sub><sup>"</sup> and X<sub>q</sub><sup>"</sup>
 
-$$Z_d'' = \frac{V_d}{2I_d''}$$
-
-$$X_d'' = \sqrt{Z_d''^2 - R_e^2}$$
-
-$$Z_q'' = \frac{V_q}{2I_d''}$$
-
-$$X_q'' = \sqrt{Z_q''^2 - R_e^2}$$
-
+- Z<sub>d</sub><sup>"</sup> = V<sub>d</sub> / (2I<sub>d</sub><sup>"</sup>)
+- X<sub>d</sub><sup>"</sup> = √(Z<sub>d</sub><sup>"2</sup> - R<sub>e</sub><sup>2</sup>)
+- Z<sub>q</sub><sup>"</sup> = V<sub>q</sub> / (2I<sub>d</sub><sup>"</sup>)
+- X<sub>q</sub><sup>"</sup> = √(Z<sub>q</sub><sup>"2</sup> - R<sub>e</sub><sup>2</sup>)
 
 
 ## Equipments Required
