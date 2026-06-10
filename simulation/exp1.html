@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Synchronous Machine Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>Dynamic Synchronous Machine Simulation</h1>
+            <p>Build the circuit visually, connect the phases, and watch the machine rotate with picture-based wiring and animated flow.</p>
+        </header>
+
+        <section class="procedure">
+            <h2>Procedure</h2>
+            <ol>
+                <li>To make connections<br><em>Click on radio buttons "1 & R", "2 & Y" and "3 & B" respectively</em></li>
+                <li>Close the 3-Phase switch to supply the synchronous machine</li>
+                <li>Observe clockwise rotation when phase sequence is R-Y-B</li>
+                <li>Open the 3-Phase switch and close the 2-Phase DC switch<br><em>Observe anticlockwise rotation</em></li>
+                <li>Change phase sequence to make the machine rotate in the same direction</li>
+                <li>Open the DC switch</li>
+                <li>Click on "Clear Connections" button</li>
+                <li>Select "1 & R", "2 & B" and "3 & Y"</li>
+                <li>Close the 3-Phase switch<br><em>The rotation becomes anticlockwise</em></li>
+                <li>Hence phase sequence is same</li>
+            </ol>
+        </section>
+
+        <section class="simulation">
+            <aside class="controls">
+                <div class="connections">
+                    <h3>Phase Connections</h3>
+                    <div class="connection-group">
+                        <label><input type="radio" name="phase1" value="R"> 1 & R</label>
+                        <label><input type="radio" name="phase1" value="Y"> 1 & Y</label>
+                        <label><input type="radio" name="phase1" value="B"> 1 & B</label>
+                    </div>
+                    <div class="connection-group">
+                        <label><input type="radio" name="phase2" value="R"> 2 & R</label>
+                        <label><input type="radio" name="phase2" value="Y"> 2 & Y</label>
+                        <label><input type="radio" name="phase2" value="B"> 2 & B</label>
+                    </div>
+                    <div class="connection-group">
+                        <label><input type="radio" name="phase3" value="R"> 3 & R</label>
+                        <label><input type="radio" name="phase3" value="Y"> 3 & Y</label>
+                        <label><input type="radio" name="phase3" value="B"> 3 & B</label>
+                    </div>
+                    <button id="clearConnections">Clear Connections</button>
+                </div>
+
+                <div class="switches">
+                    <h3>Switches</h3>
+                    <div class="switch-visual">
+                        <img src="images/om.png" alt="3-Phase switch" class="switch-icon">
+                        <span>3-Phase Switch</span>
+                        <span id="threePhaseState" class="switch-state">OFF</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="threePhaseSwitch">
+                        <span class="slider"></span>
+                    </label>
+
+                    <div class="switch-visual">
+                        <img src="images/om.png" alt="DC switch" class="switch-icon">
+                        <span>2-Phase DC Switch</span>
+                        <span id="twoPhaseState" class="switch-state">OFF</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="twoPhaseSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </aside>
+
+            <div class="diagram">
+                <div class="panel supply-panel">
+                    <div class="panel-title">3-Phase AC Supply</div>
+                    <div class="phase-rows">
+                        <div class="phase-row" data-phase="phase1">
+                            <span class="phase-number">1</span>
+                            <div class="phase-track">
+                                <span id="wire1" class="phase-wire"></span>
+                            </div>
+                            <span class="phase-end">R</span>
+                        </div>
+                        <div class="phase-row" data-phase="phase2">
+                            <span class="phase-number">2</span>
+                            <div class="phase-track">
+                                <span id="wire2" class="phase-wire"></span>
+                            </div>
+                            <span class="phase-end">Y</span>
+                        </div>
+                        <div class="phase-row" data-phase="phase3">
+                            <span class="phase-number">3</span>
+                            <div class="phase-track">
+                                <span id="wire3" class="phase-wire"></span>
+                            </div>
+                            <span class="phase-end">B</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel machine-panel">
+                    <div class="panel-title">Synchronous Machine</div>
+                    <div class="machine-diagram">
+                        <img src="images/sm.png" id="machineImage" alt="Synchronous machine" class="machine-image">
+                        <div id="rotationArrow" class="rotation-arrow off">
+                            <svg viewBox="0 0 64 64" aria-hidden="true">
+                                <path d="M16 32 A16 16 0 1 1 48 32" class="arrow-ring" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="status-box">
+                        <div id="statusText">Select connections and switch ON to start.</div>
+                        <div class="phase-map" id="phaseMap"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="simulation.js"></script>
+</body>
+</html></content>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous Machine Simulation | Virtual Laboratory</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #7f8c8d;
+            --border-color: #e0e6ed;
+            --accent-blue: #2980b9;
+            
+            /* Scientific Data Palette */
+            --phase1-color: rgba(211, 47, 47, 0.85);  /* Crimson */
+            --phase2-color: rgba(46, 125, 50, 0.85);  /* Sea Green */
+            --phase3-color: rgba(25, 118, 210, 0.85); /* Royal Blue */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .top-navbar {
+            background-color: #1a252f;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .top-navbar h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .top-navbar .subtitle {
+            font-size: 12px;
+            color: #bdc3c7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+        }
+
+        /* Controls Sidebar */
+        .controls-panel {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+            height: fit-content;
+        }
+
+        .control-group {
+            margin-bottom: 25px;
+        }
+
+        .control-group h3 {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            margin-right: 8px;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .input-field label {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .input-field input {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: monospace;
+            transition: border-color 0.2s;
+        }
+
+        .input-field input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(41, 128, 185, 0.1);
+        }
+
+        /* Graph Grid */
+        .graph-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+        }
+
+        .graph-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .graph-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .graph-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin: 0;
+        }
+
+        .graph-stats {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+            text-align: right;
+            color: #495057;
+        }
+
+        .canvas-wrapper {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 10px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .axis-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div>
+            <h1>Synchronous Machine Simulator</h1>
+            <div class="subtitle">Electrical Engineering Virtual Laboratory</div>
+        </div>
+        <div class="subtitle">Dept. of Electrical Engineering</div>
+    </header>
+
+    <div class="container">
+        
+        <aside class="controls-panel">
+            <div class="control-group">
+                <h3>Phase Configuration</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="phase1" checked onchange="updateAll()">
+                    <span class="color-swatch" style="background: var(--phase1-color);"></span> Phase 1 (0&deg;)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="phase2" checked onchange="updateAll()">
+                    <span class="color-swatch" style="background: var(--phase2-color);"></span> Phase 2 (+120&deg;)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="phase3" onchange="updateAll()">
+                    <span class="color-swatch" style="background: var(--phase3-color);"></span> Phase 3 (-120&deg;)
+                </label>
+            </div>
+
+            <div class="control-group">
+                <h3>Simulation Parameters</h3>
+                <div class="input-field">
+                    <label for="inputL">Self Inductance Max Angle (rad)</label>
+                    <input type="number" id="inputL" value="20" step="0.5" min="0.1" onchange="drawL()">
+                </div>
+                <div class="input-field">
+                    <label for="inputM">Mutual Inductance Max Angle (rad)</label>
+                    <input type="number" id="inputM" value="30" step="0.5" min="0.1" onchange="drawM()">
+                </div>
+                <div class="input-field">
+                    <label for="inputIa">Armature Current Max Time (sec)</label>
+                    <input type="number" id="inputIa" value="2" step="0.1" min="0.1" max="6" onchange="drawIa()">
+                </div>
+            </div>
+        </aside>
+
+        <main class="graph-dashboard">
+            
+            <div class="graph-card">
+                <div class="graph-header">
+                    <h2 class="graph-title">Self Inductance vs. Angle (L)</h2>
+                    <div class="graph-stats" id="statsL">
+                        L<sub>max</sub>: 0.0 mH<br>L<sub>min</sub>: 0.0 mH
+                    </div>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="canvasL"></canvas>
+                </div>
+                <div class="axis-label">Rotor Angle (radians) &rarr;</div>
+            </div>
+
+            <div class="graph-card">
+                <div class="graph-header">
+                    <h2 class="graph-title">Mutual Inductance vs. Angle (M)</h2>
+                    <div class="graph-stats" id="statsM">
+                        M<sub>max</sub>: 0.0 mH<br>M<sub>min</sub>: 0.0 mH
+                    </div>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="canvasM"></canvas>
+                </div>
+                <div class="axis-label">Rotor Angle (radians) &rarr;</div>
+            </div>
+
+            <div class="graph-card" style="grid-column: 1 / -1;">
+                <div class="graph-header">
+                    <h2 class="graph-title">Armature Current Transient (I<sub>a</sub>)</h2>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="canvasIa"></canvas>
+                </div>
+                <div class="axis-label">Time &Delta;t (seconds) &rarr;</div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        Simulation Architecture &amp; UI Development by Mudit Vij &copy; 2026
+    </footer>
+
+    <script>
+        const PI2_3 = 2.0943951023931953;
+        const OMEGA = 314.1592653589793;
+
+        // Scientific Palette Colors matching CSS
+        const COLORS = {
+            p1: 'rgba(211, 47, 47, 0.85)',
+            p2: 'rgba(46, 125, 50, 0.85)',
+            p3: 'rgba(25, 118, 210, 0.85)'
+        };
+
+        function getActivePhases() {
+            return [
+                { active: document.getElementById('phase1').checked, color: COLORS.p1, selfShift: 0,      mutualShift: -PI2_3 },
+                { active: document.getElementById('phase2').checked, color: COLORS.p2, selfShift: PI2_3,  mutualShift: 0 },
+                { active: document.getElementById('phase3').checked, color: COLORS.p3, selfShift: -PI2_3, mutualShift: PI2_3 }
+            ];
+        }
+
+        // High-DPI Canvas Setup
+        function setupCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Get actual display size
+            const rect = canvas.parentElement.getBoundingClientRect();
+            
+            // Increase actual size in memory (scale for high DPI displays)
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            
+            // Normalize coordinate system to use css pixels
+            ctx.scale(dpr, dpr);
+            
+            return { ctx, width: rect.width, height: rect.height };
+        }
+
+        function drawGrid(ctx, width, height) {
+            ctx.beginPath();
+            ctx.strokeStyle = '#ecf0f1';
+            ctx.lineWidth = 1;
+            
+            // Vertical grid lines
+            for(let x = 0; x <= width; x += width/10) {
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+            }
+            // Horizontal grid lines
+            for(let y = 0; y <= height; y += height/6) {
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+            }
+            ctx.stroke();
+
+            // Draw axis borders
+            ctx.beginPath();
+            ctx.strokeStyle = '#bdc3c7';
+            ctx.lineWidth = 2;
+            ctx.moveTo(0, 0);
+            ctx.lineTo(0, height);
+            ctx.lineTo(width, height);
+            ctx.stroke();
+        }
+
+        function renderLines(ctx, datasets, min, max, width, height) {
+            const range = max - min;
+            const padding = range === 0 ? 1 : range * 0.15; // 15% padding top and bottom
+            const scaleMax = max + padding;
+            const scaleMin = min - padding;
+
+            // Draw Zero Line if applicable
+            if (scaleMin < 0 && scaleMax > 0) {
+                let zeroY = height - ((0 - scaleMin) / (scaleMax - scaleMin)) * height;
+                ctx.beginPath();
+                ctx.strokeStyle = '#95a5a6';
+                ctx.lineWidth = 1.5;
+                ctx.setLineDash([5, 5]); // Dashed line for Zero
+                ctx.moveTo(0, zeroY);
+                ctx.lineTo(width, zeroY);
+                ctx.stroke();
+                ctx.setLineDash([]); // Reset
+            }
+
+            // Draw Data Lines
+            datasets.forEach(data => {
+                ctx.beginPath();
+                ctx.strokeStyle = data.color;
+                ctx.lineWidth = 2.0; // Slightly thicker, anti-aliased lines
+                ctx.lineJoin = 'round';
+                
+                for (let x = 0; x <= width; x++) {
+                    let y = height - ((data.points[x] - scaleMin) / (scaleMax - scaleMin)) * height;
+                    if (x === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+            });
+        }
+
+        function drawL() {
+            const { ctx, width, height } = setupCanvas('canvasL');
+            const maxAngle = parseFloat(document.getElementById('inputL').value);
+            
+            ctx.clearRect(0, 0, width, height);
+            drawGrid(ctx, width, height);
+            
+            if (isNaN(maxAngle) || maxAngle <= 0) return;
+
+            const phases = getActivePhases();
+            let datasets = [];
+            let globalMax = -Infinity, globalMin = Infinity;
+
+            phases.forEach(phase => {
+                if (!phase.active) return;
+                let points = [];
+                for (let x = 0; x <= width; x++) {
+                    let angle = (x / width) * maxAngle;
+                    let L = (0.0020 + 0.0002 * Math.cos(2 * angle + phase.selfShift)) * 1000;
+                    points.push(L);
+                    if (L > globalMax) globalMax = L;
+                    if (L < globalMin) globalMin = L;
+                }
+                datasets.push({ color: phase.color, points: points });
+            });
+
+            if (datasets.length > 0) {
+                document.getElementById('statsL').innerHTML = `L<sub>max</sub>: ${globalMax.toFixed(2)} mH<br>L<sub>min</sub>: ${globalMin.toFixed(2)} mH`;
+                renderLines(ctx, datasets, globalMin, globalMax, width, height);
+            } else {
+                document.getElementById('statsL').innerHTML = `L<sub>max</sub>: 0.0 mH<br>L<sub>min</sub>: 0.0 mH`;
+            }
+        }
+
+        function drawM() {
+            const { ctx, width, height } = setupCanvas('canvasM');
+            const maxAngle = parseFloat(document.getElementById('inputM').value);
+            
+            ctx.clearRect(0, 0, width, height);
+            drawGrid(ctx, width, height);
+
+            if (isNaN(maxAngle) || maxAngle <= 0) return;
+
+            const phases = getActivePhases();
+            let datasets = [];
+            let globalMax = -Infinity, globalMin = Infinity;
+
+            phases.forEach(phase => {
+                if (!phase.active) return;
+                let points = [];
+                for (let x = 0; x <= width; x++) {
+                    let angle = (x / width) * maxAngle;
+                    let M = (-0.04 - 0.0040 * Math.cos(2 * angle + phase.mutualShift)) * 1000;
+                    points.push(M);
+                    if (M > globalMax) globalMax = M;
+                    if (M < globalMin) globalMin = M;
+                }
+                datasets.push({ color: phase.color, points: points });
+            });
+
+            if (datasets.length > 0) {
+                document.getElementById('statsM').innerHTML = `M<sub>max</sub>: ${globalMax.toFixed(1)} mH<br>M<sub>min</sub>: ${globalMin.toFixed(1)} mH`;
+                renderLines(ctx, datasets, globalMin, globalMax, width, height);
+            } else {
+                document.getElementById('statsM').innerHTML = `M<sub>max</sub>: 0.0 mH<br>M<sub>min</sub>: 0.0 mH`;
+            }
+        }
+
+        function drawIa() {
+            const { ctx, width, height } = setupCanvas('canvasIa');
+            const maxTime = parseFloat(document.getElementById('inputIa').value);
+            
+            ctx.clearRect(0, 0, width, height);
+            drawGrid(ctx, width, height);
+
+            if (isNaN(maxTime) || maxTime <= 0) return;
+
+            let points = [];
+            let globalMax = -Infinity, globalMin = Infinity;
+
+            for (let x = 0; x <= width; x++) {
+                let t = (x / width) * maxTime;
+                let originalPixelShift = (x / width) * 300; 
+                let current = Math.sqrt(2) * (1.0 * Math.cos(OMEGA * t - 1.5) + 0.5 * Math.cos(OMEGA * t / 2 - 2 * originalPixelShift / 60));
+                
+                points.push(current);
+                if (current > globalMax) globalMax = current;
+                if (current < globalMin) globalMin = current;
+            }
+
+            renderLines(ctx, [{color: COLORS.p1, points: points}], globalMin, globalMax, width, height);
+        }
+
+        function updateAll() {
+            drawL();
+            drawM();
+            drawIa();
+        }
+
+        // Handle window resizing to keep canvas crisp
+        window.addEventListener('resize', updateAll);
+        
+        // Initial setup
+        window.onload = updateAll;
+    </script>
+
+</body>
+</html>
